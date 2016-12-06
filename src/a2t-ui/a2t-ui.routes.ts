@@ -1,3 +1,4 @@
+import { NgModule }             from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Angular2TokenService } from '../angular2-token.service';
 
@@ -22,4 +23,8 @@ const routes: Routes = [{
         ]
 }];
 
-export const a2tRoutes = RouterModule.forChild(routes);
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
+})
+export class a2tRoutes {}

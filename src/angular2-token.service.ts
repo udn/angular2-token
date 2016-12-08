@@ -40,6 +40,10 @@ export class Angular2TokenService implements CanActivate {
             return null;
     }
 
+    public setAuthData(authData: AuthData) {
+        this._currentAuthData = authData;
+    }
+
     get currentUserData(): UserData {
         return this._currentUserData;
     }
